@@ -1,6 +1,6 @@
 {
   "name": "vue-mutation-observer",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "dist/vue-mutation-observer.js",
   "description": "VueJS directive to observe changes in DOM use MutationObserver API",
   "repository": {

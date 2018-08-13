@@ -22,9 +22,9 @@ export default {
         case 'characterData':
           currentConfig = Object.assign(
             currentConfig,
-            { 
+            {
               characterData: true,
-              characterDataOldValue: true 
+              characterDataOldValue: true
             }
           )
           break
@@ -47,11 +47,11 @@ export default {
           console.warn(`vue-mutation-observer: "Unknown modifier: ${modifier}."`)
       }
     }
-    currentConfig.subtree = !!arg && arg === 'subtree'
     if (value.config) currentConfig = Object.assign(currentConfig, value.config)
-    console.log(currentConfig)
+    const finalConfig = (Object.keys(currentConfig).length > 0 && currentConfig) || config
+    finalConfig.subtree = !!arg && arg === 'subtree'
     try {
-      observer.observe(el, (Object.keys(currentConfig).length !== 0 && currentConfig) || config)
+      observer.observe(el, finalConfig)
     } catch (err) {
       console.error(`vue-mutation-observer: "${err}."`)
     }
