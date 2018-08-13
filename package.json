@@ -1,6 +1,6 @@
 {
   "name": "vue-mutation-observer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/vue-mutation-observer.js",
   "description": "VueJS directive to observe changes in DOM use MutationObserver API",
   "repository": {
@@ -17,7 +17,7 @@
     "build": "rollup -c",
     "prepublish": "npm run build"
   },
-  "dependencies": {
+  "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",

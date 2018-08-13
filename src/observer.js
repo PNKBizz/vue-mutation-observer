@@ -1,8 +1,8 @@
 let observer
 let config = {
   attributes: true,
+  attributeOldValue: true,
   childList: true,
-  subtree: true,
   characterData: true,
   characterDataOldValue: true
 }
